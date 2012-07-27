@@ -14,6 +14,9 @@ WeightResult = namedtuple("weightmatch","weight_start weight_end weight_values r
 class InvalidText(Exception):
     pass
 
+class DateInvalid(Exception):
+    pass
+
 WeightConversions = {
     "pounds":lambda x: x*0.45,
     "kilograms":lambda x:x,
@@ -91,15 +94,31 @@ class TargetParser(object):
 
         total_weight.AddWeight(first_weight.weight_values["weight"], first_weight.weight_values["value"])
 
-        second_weight = self.ExtractSingleWeight(first_weight.remaining_text)
+        new_string = first_weight.remaining_text
+
+        if new_string.startswith(self.WEIGHT_LINK):
+            for prefix in self.WEIGHT_LINK:
+                new_string = new_string.lstrip(prefix).strip()
+
+        second_weight = self.ExtractSingleWeight(new_string)
         if second_weight:
             total_weight.AddWeight(second_weight.weight_values["weight"], second_weight.weight_values["value"])
+            new_string = second_weight.remaining_text
 
-        return total_weight
+        return new_string, total_weight
 
+
+    def GetDateFromString(self, string):
+        result, code = self.parser.parse(string)
+        if not code == 1:
+            raise DateInvalid()
 
 
     def Parse(self, text):
         text = text.lower().strip()
         print text
-        print self.GetTotalWeightFromString(text)
+        string, weight = self.GetTotalWeightFromString(text)
+        print weight
+        print self.GetDateFromString(string)
+
+

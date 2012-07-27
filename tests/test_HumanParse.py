@@ -11,7 +11,6 @@ TEST_TEXT = [
     ("1.5 stone in 3 days"),
     ("12 stone and 2 pounds in a month"),
     #("im invalid bro!"),
-
 ]
 
 
