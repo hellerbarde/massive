@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/static/css/layout.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Expletus+Sans|Lato:300,900' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap-modal.js"></script>
+        <link href="/static/css/prettify.css" rel="stylesheet" type="text/css">
+        <script src="/static/js/prettify.js" type="text/javascript"></script>
+        
+    </head>
+    <body onload="prettyPrint()">
+        <div class="container-fluid">
+            <div class="sidebar">
+                <div class="span2">
+                    <header>
+                        <h1><a href="/">Toms corner of the internet</a></h1>
+                        <br />
+                        <span>Just another blog</span>
+                        <ul>
+                            <li><p><a href="https://github.com/orf/">Github</a></p></li>
+                            <li><p><a href="mailto:tom@tomforb.es?subject:Howdy">Email me</a></p></li>
+                            <li><p><a href="/posts.rss">Feed</a></p></li>
+                        </ul>
+                        <span class="powered-by">
+                            Powered by <a href="http://github.com/orf/simple">Simple</a>,
+                            inspired by <a href="https://github.com/NateW/obtvse">Obtvse</a>
+                        </span>
+                    </header>
+                </div>
+            </div>
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="span9">
+                        <div class="row">
+                            <div class="span9"><time>
+                                July 26, 2012
+                            </time></div>
+                        </div>
+                        <div class="row">
+                            <div class="span9">
+                                
+
+    
+        <section id="post-9">
+            <div class="post_container">
+                <div class="post_header">
+                    <h1><a href="/in-favour-of-orm-s?pid=0">In favour of ORM&#39;s</a></h1>
+                </div>
+<p>It handles conflict resolution for you. Its pretty neat.</p>
+            </div>
+        </section>
+    
+        <section id="post-8">
+            <div class="post_container">
+                <div class="post_header">
+                    <h1><a href="/making-a-film-recommendation-site-by-cheating?pid=0">Making a film recommendation site by cheating</a></h1>
+                </div>
+                <br/>
+                <p><em>View the site here: <a href="http://movies.tomforb.es">http://movies.tomforb.es</a> or the code <a href="https://github.com/orf/MovieFinder">here</a></em></p>
+            </div>
+        </section>
+    
+        <section id="post-6">
+            <div class="post_container">
+                <div class="post_header">
+                    <h1><a href="/creating-a-url-shortening-service-with-django?pid=0">Creating a URL shortening service with Django</a></h1>
+                </div>
+                <br/>
+                <p><em>View it live <a href="http://links.tomforb.es">here</a> or get the <a href="https://github.com/orf/tinylink">code here</a></em></p>
+<p>The first URL shortening site I saw was several years ago and was called <a href="http://tinyurl.com/">TinyURL</a>. Soon after Twitter gained popularity a whole slew of them popped up (<a href="https://bitly.com/">bitly</a>, <a href="http://tiny.cc/">tiny.cc</a>, <a href="http://is.gd/">is.gd</a>) to cater for the masses constrained by Twitters 140 character limit, but a lot shut down because it is fairly hard to monetize and Twitter shortens URL's now, making them a bit pointless.</p>
+            </div>
+        </section>
+    
+        <section id="post-5">
+            <div class="post_container">
+                <div class="post_header">
+                    <h1><a href="/using-a-custom-sqlalchemy-users-model-with-django?pid=0">Using a custom SQLAlchemy Users model with Django</a></h1>
+                </div>
+                <br/>
+                <p>I really dislike <a href="https://www.djangoproject.com/">Django's</a> ORM. For my job I have written (and continue to maintain) a very large internal project that uses Django's ORM, templating language and MVC framework to serve requests, and I made the unfortunate mistake of sticking with Django's ORM instead of using the much more powerful <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. The one nice thing about Django's ORM is that it is easy, but that comes at the price of efficiency and power. For example the ability to add more than one record at a time to the database was only just added in Django 1.4, before that if you wanted to insert say 100 models Django would execute 100 INSERT queries, followed by a checkpoint if you were inside a transaction - the result being ~200 queries when 2 would have sufficed. This isn't to say that Django's ORM is bad, its just not right for me.</p>
+            </div>
+        </section>
+    
+        <section id="post-4">
+            <div class="post_container">
+                <div class="post_header">
+                    <h1><a href="/draconian-internet-filters?pid=0">Draconian internet filters</a></h1>
+                </div>
+                <br/>
+                <p>My universities student network is pretty restricted. I just finished coding a few changes to <a href="https://github.com/orf/simple">Simple</a> and realised I couldn't push any changes to GitHub due to port restrictions. It appears that they block almost all ports bar 80 and 445 via TCP, which is fine for most users but is quite annoying for me - I often need to SSH into one of my servers or use non-standard ports.</p>
+            </div>
+        </section>
+    
+
+    <ul class="pager">
+        
+
+        
+            <li class="next">
+                <a href="/?page=1">Next  &rarr;</a>
+            </li>
+        
+    </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+            <script>
+                var _gaq=[['_setAccount','UA-7457807-7'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        
+    </body>
+</html>
